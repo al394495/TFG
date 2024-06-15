@@ -490,9 +490,6 @@
     "m_ActiveTargets": [
         {
             "m_Id": "5986f9c873044e86a3d5f1108475ea2e"
-        },
-        {
-            "m_Id": "0630182f66de4cfbbfb34763e9341210"
         }
     ]
 }
@@ -657,14 +654,6 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.VFXTarget",
-    "m_ObjectId": "0630182f66de4cfbbfb34763e9341210",
-    "m_Lit": true,
-    "m_AlphaTest": false
 }
 
 {
