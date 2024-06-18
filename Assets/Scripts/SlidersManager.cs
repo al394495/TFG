@@ -9,11 +9,18 @@ public class SlidersManager : MonoBehaviour
     public VisualEffect weather;
 
     public Slider rainIntensitySlider;
+    public Slider rainDirectionSlider;
     public Slider snowIntensitySlider;
-    public Slider fogIntensitySlider;
+    public Slider snowGravitySlider;
+    public Slider fogDistanceSlider;
     public void OnRainIntensityChanged()
     {
         weather.SetInt("RainRate", (int) rainIntensitySlider.value);
+    }
+
+    public void OnRainDirectionChanged()
+    {
+        weather.SetFloat("RainDirection", rainDirectionSlider.value);
     }
 
     public void OnSnowIntensityChanged()
@@ -21,8 +28,13 @@ public class SlidersManager : MonoBehaviour
         weather.SetInt("SnowRate", (int)snowIntensitySlider.value);
     }
 
-    public void OnFogIntensityChanged()
+    public void OnSnowGravityChanged()
     {
-        weather.SetInt("FogRate", (int)fogIntensitySlider.value);
+        weather.SetFloat("SnowGravity", snowGravitySlider.value);
+    }
+
+    public void OnFogDistanceChanged()
+    {
+        weather.SetFloat("FogDistance", fogDistanceSlider.value);
     }
 }

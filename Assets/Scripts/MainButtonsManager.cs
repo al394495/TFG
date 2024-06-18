@@ -12,41 +12,52 @@ public class MainButtonsManager : MonoBehaviour
     public Button fogButton;
 
     public GameObject rainIntensitySlider;
+    public GameObject rainDirectionSlider;
     public GameObject snowIntensitySlider;
-    public GameObject fogIntensitySlider;
+    public GameObject snowGravitySlider;
+    public GameObject fogDistanceSlider;
 
     public VisualEffect weather;
 
     public void OnRainButtonPressed()
     {
         rainIntensitySlider.SetActive(true);
+        rainDirectionSlider.SetActive(true);
         rainIntensitySlider.GetComponent<Slider>().value = 0;
+        rainDirectionSlider.GetComponent<Slider>().value = 0;
 
         snowIntensitySlider.SetActive(false);
+        snowGravitySlider.SetActive(false);
         weather.SetInt("SnowRate", 0);
-        fogIntensitySlider.SetActive(false);
+        fogDistanceSlider.SetActive(false);
         weather.SetInt("FogRate", 0);
     }
 
     public void OnSnowButtonPressed()
     {
         snowIntensitySlider.SetActive(true);
+        snowGravitySlider.SetActive(true);
         snowIntensitySlider.GetComponent<Slider>().value = 0;
+        snowGravitySlider.GetComponent<Slider>().value = -2;
 
         rainIntensitySlider.SetActive(false);
+        rainDirectionSlider.SetActive(false);
         weather.SetInt("RainRate", 0);
-        fogIntensitySlider.SetActive(false);
+        fogDistanceSlider.SetActive(false);
         weather.SetInt("FogRate", 0);
     }
 
     public void OnFogButtonPressed()
     {
-        fogIntensitySlider.SetActive(true);
-        fogIntensitySlider.GetComponent<Slider>().value = 0;
+        fogDistanceSlider.SetActive(true);
+        fogDistanceSlider.GetComponent<Slider>().value = 0;
+        weather.SetInt("FogRate", 15);
 
         snowIntensitySlider.SetActive(false);
+        snowGravitySlider.SetActive(false);
         weather.SetInt("SnowRate", 0);
         rainIntensitySlider.SetActive(false);
+        rainDirectionSlider.SetActive(false);
         weather.SetInt("RainRate", 0);
     }
 }
