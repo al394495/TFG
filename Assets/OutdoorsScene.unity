@@ -649,8 +649,8 @@ Transform:
   m_GameObject: {fileID: 298369962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2010,7 +2010,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1156902390}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 300
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -2807,7 +2807,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1925967514}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 300
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -2889,7 +2889,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 297231c889f28ca49b3961fcab7fa3b7, type: 2}
+  m_MaterialTemplate: {fileID: 2100000, guid: e799b112529f4fa4ba8717e087aa1ffa, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -2977,7 +2977,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 25
+  field of view: 30
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -3003,13 +3003,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.06790467, y: -0, z: -0, w: 0.99769187}
-  m_LocalPosition: {x: -4.763, y: 1.84, z: -14.486}
+  m_LocalRotation: {x: 0.067823015, y: 0.048933357, z: -0.0033304922, w: 0.9964911}
+  m_LocalPosition: {x: -0.4, y: 3.29, z: -14.486}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 7.787, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.787, y: 5.623, z: 0}
 --- !u!114 &1823688468
 MonoBehaviour:
   m_ObjectHideFlags: 0
