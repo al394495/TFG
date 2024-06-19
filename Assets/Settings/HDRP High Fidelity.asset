@@ -87,7 +87,7 @@ MonoBehaviour:
       maxAreaLightsOnScreen: 64
       maxCubeReflectionOnScreen: 32
       maxPlanarReflectionOnScreen: 16
-      maxDecalsOnScreen: 512
+      maxDecalsOnScreen: 2000
       maxLightsPerClusterCell: 16
       maxLocalVolumetricFogSize: 32
       maxLocalVolumetricFogOnScreen: 64
