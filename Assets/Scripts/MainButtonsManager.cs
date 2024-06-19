@@ -20,12 +20,19 @@ public class MainButtonsManager : MonoBehaviour
 
     public VisualEffect weather;
 
+    public AudioSource rain;
+    public AudioSource wind;
+
     public void OnRainButtonPressed()
     {
         rainIntensitySlider.SetActive(true);
         rainDirectionSlider.SetActive(true);
         rainIntensitySlider.GetComponent<Slider>().value = 0;
         rainDirectionSlider.GetComponent<Slider>().value = 0;
+
+        rain.mute = false;
+        rain.volume = 0;
+        wind.mute = false;
 
         snowIntensitySlider.SetActive(false);
         snowGravitySlider.SetActive(false);
@@ -42,6 +49,9 @@ public class MainButtonsManager : MonoBehaviour
         snowIntensitySlider.GetComponent<Slider>().value = 0;
         snowGravitySlider.GetComponent<Slider>().value = -2;
 
+        rain.mute = true;
+        wind.mute = false;
+
         rainIntensitySlider.SetActive(false);
         rainDirectionSlider.SetActive(false);
         weather.SetInt("RainRate", 0);
@@ -57,6 +67,9 @@ public class MainButtonsManager : MonoBehaviour
         fogDistanceSlider.GetComponent<Slider>().value = 0;
         fogAlphaSlider.GetComponent<Slider>().value = 0.1f;
         weather.SetInt("FogRate", 15);
+
+        rain.mute = true;
+        wind.mute = true;
 
         snowIntensitySlider.SetActive(false);
         snowGravitySlider.SetActive(false);

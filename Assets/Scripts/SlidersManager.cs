@@ -14,9 +14,14 @@ public class SlidersManager : MonoBehaviour
     public Slider snowGravitySlider;
     public Slider fogDistanceSlider;
     public Slider fogAlphaSlider;
+
+    public AudioSource rain;
+
     public void OnRainIntensityChanged()
     {
         weather.SetInt("RainRate", (int) rainIntensitySlider.value);
+
+        rain.volume =  rainIntensitySlider.value / rainIntensitySlider.maxValue;
     }
 
     public void OnRainDirectionChanged()
