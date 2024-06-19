@@ -13,6 +13,7 @@ public class SlidersManager : MonoBehaviour
     public Slider snowIntensitySlider;
     public Slider snowGravitySlider;
     public Slider fogDistanceSlider;
+    public Slider fogAlphaSlider;
     public void OnRainIntensityChanged()
     {
         weather.SetInt("RainRate", (int) rainIntensitySlider.value);
@@ -36,5 +37,12 @@ public class SlidersManager : MonoBehaviour
     public void OnFogDistanceChanged()
     {
         weather.SetFloat("FogDistance", fogDistanceSlider.value);
+    }
+
+    public void OnFogAlphaChanged()
+    {
+        AnimationCurve aCurve = weather.GetAnimationCurve("FogAlpha");
+
+        weather.SetAnimationCurve("FogAlpha", new AnimationCurve(aCurve.keys[0], new Keyframe(aCurve.keys[1].time, fogAlphaSlider.value), new Keyframe(aCurve.keys[2].time, fogAlphaSlider.value), aCurve.keys[3]));
     }
 }

@@ -16,6 +16,7 @@ public class MainButtonsManager : MonoBehaviour
     public GameObject snowIntensitySlider;
     public GameObject snowGravitySlider;
     public GameObject fogDistanceSlider;
+    public GameObject fogAlphaSlider;
 
     public VisualEffect weather;
 
@@ -30,6 +31,7 @@ public class MainButtonsManager : MonoBehaviour
         snowGravitySlider.SetActive(false);
         weather.SetInt("SnowRate", 0);
         fogDistanceSlider.SetActive(false);
+        fogAlphaSlider.SetActive(false);
         weather.SetInt("FogRate", 0);
     }
 
@@ -44,13 +46,16 @@ public class MainButtonsManager : MonoBehaviour
         rainDirectionSlider.SetActive(false);
         weather.SetInt("RainRate", 0);
         fogDistanceSlider.SetActive(false);
+        fogAlphaSlider.SetActive(false);
         weather.SetInt("FogRate", 0);
     }
 
     public void OnFogButtonPressed()
     {
         fogDistanceSlider.SetActive(true);
+        fogAlphaSlider.SetActive(true);
         fogDistanceSlider.GetComponent<Slider>().value = 0;
+        fogAlphaSlider.GetComponent<Slider>().value = 0.1f;
         weather.SetInt("FogRate", 15);
 
         snowIntensitySlider.SetActive(false);
