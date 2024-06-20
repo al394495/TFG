@@ -8,20 +8,20 @@ public class SlidersManager : MonoBehaviour
 {
     public VisualEffect weather;
 
-    public Slider rainIntensitySlider;
+    public Slider rainRateSlider;
     public Slider rainDirectionSlider;
-    public Slider snowIntensitySlider;
+    public Slider snowRateSlider;
     public Slider snowGravitySlider;
     public Slider fogDistanceSlider;
     public Slider fogAlphaSlider;
 
     public AudioSource rain;
 
-    public void OnRainIntensityChanged()
+    public void OnRainRateChanged()
     {
-        weather.SetInt("RainRate", (int) rainIntensitySlider.value);
+        weather.SetInt("RainRate", (int) rainRateSlider.value);
 
-        rain.volume =  rainIntensitySlider.value / rainIntensitySlider.maxValue;
+        rain.volume =  rainRateSlider.value / rainRateSlider.maxValue;
     }
 
     public void OnRainDirectionChanged()
@@ -29,9 +29,9 @@ public class SlidersManager : MonoBehaviour
         weather.SetFloat("RainDirection", rainDirectionSlider.value);
     }
 
-    public void OnSnowIntensityChanged()
+    public void OnSnowRateChanged()
     {
-        weather.SetInt("SnowRate", (int)snowIntensitySlider.value);
+        weather.SetInt("SnowRate", (int)snowRateSlider.value);
     }
 
     public void OnSnowGravityChanged()
