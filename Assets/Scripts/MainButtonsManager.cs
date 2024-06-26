@@ -12,6 +12,9 @@ public class MainButtonsManager : MonoBehaviour
     public GameObject snowGravitySlider;
     public GameObject fogDistanceSlider;
     public GameObject fogAlphaSlider;
+    public GameObject tornadoVelocitySlider;
+    public GameObject tornadoPositionXSlider;
+    public GameObject tornadoPositionZSlider;
 
     public VisualEffect weather;
 
@@ -35,6 +38,10 @@ public class MainButtonsManager : MonoBehaviour
         fogDistanceSlider.SetActive(false);
         fogAlphaSlider.SetActive(false);
         weather.SetInt("FogRate", 0);
+        tornadoVelocitySlider.SetActive(false);
+        tornadoPositionXSlider.SetActive(false);
+        tornadoPositionZSlider.SetActive(false);
+        weather.SetInt("TornadoRate", 0);
     }
 
     public void OnSnowButtonPressed()
@@ -53,6 +60,10 @@ public class MainButtonsManager : MonoBehaviour
         fogDistanceSlider.SetActive(false);
         fogAlphaSlider.SetActive(false);
         weather.SetInt("FogRate", 0);
+        tornadoVelocitySlider.SetActive(false);
+        tornadoPositionXSlider.SetActive(false);
+        tornadoPositionZSlider.SetActive(false);
+        weather.SetInt("TornadoRate", 0);
     }
 
     public void OnFogButtonPressed()
@@ -72,6 +83,34 @@ public class MainButtonsManager : MonoBehaviour
         rainRateSlider.SetActive(false);
         rainDirectionSlider.SetActive(false);
         weather.SetInt("RainRate", 0);
+        tornadoVelocitySlider.SetActive(false);
+        tornadoPositionXSlider.SetActive(false);
+        tornadoPositionZSlider.SetActive(false);
+        weather.SetInt("TornadoRate", 0);
+    }
+
+    public void OnTornadoButtonPressed()
+    {
+        tornadoVelocitySlider.SetActive(true);
+        tornadoPositionXSlider.SetActive(true);
+        tornadoPositionZSlider.SetActive(true);
+        tornadoVelocitySlider.GetComponent<Slider>().value = 5;
+        tornadoPositionXSlider.GetComponent<Slider>().value = 0;
+        tornadoPositionZSlider.GetComponent<Slider>().value = 0;
+        weather.SetInt("TornadoRate", 500);
+
+        rain.mute = true;
+        wind.mute = true;
+
+        snowRateSlider.SetActive(false);
+        snowGravitySlider.SetActive(false);
+        weather.SetInt("SnowRate", 0);
+        rainRateSlider.SetActive(false);
+        rainDirectionSlider.SetActive(false);
+        weather.SetInt("RainRate", 0);
+        fogAlphaSlider.SetActive(false);
+        fogDistanceSlider.SetActive(false);
+        weather.SetInt("FogRate", 0);
     }
 
     public void OnQuitButtonPressed()

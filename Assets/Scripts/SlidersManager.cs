@@ -14,6 +14,9 @@ public class SlidersManager : MonoBehaviour
     public Slider snowGravitySlider;
     public Slider fogDistanceSlider;
     public Slider fogAlphaSlider;
+    public Slider tornadoVelocitySlider;
+    public Slider tornadoPositionXSlider;
+    public Slider tornadoPositionZSlider;
 
     public AudioSource rain;
 
@@ -49,5 +52,20 @@ public class SlidersManager : MonoBehaviour
         AnimationCurve aCurve = weather.GetAnimationCurve("FogAlpha");
 
         weather.SetAnimationCurve("FogAlpha", new AnimationCurve(aCurve.keys[0], new Keyframe(aCurve.keys[1].time, fogAlphaSlider.value), new Keyframe(aCurve.keys[2].time, fogAlphaSlider.value), aCurve.keys[3]));
+    }
+
+    public void OnTornadoVelocityChanged()
+    {
+        weather.SetFloat("TornadoVelocity", tornadoVelocitySlider.value);
+    }
+
+    public void OnTornadoPositionXChanged()
+    {
+        weather.SetFloat("TornadoPositionX", tornadoPositionXSlider.value);
+    }
+
+    public void OnTornadoPositionZChanged()
+    {
+        weather.SetFloat("TornadoPositionZ", tornadoPositionZSlider.value);
     }
 }
