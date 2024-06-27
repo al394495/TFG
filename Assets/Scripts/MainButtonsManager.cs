@@ -98,7 +98,7 @@ public class MainButtonsManager : MonoBehaviour
         tornadoVelocitySlider.SetActive(true);
         tornadoPositionXSlider.SetActive(true);
         tornadoPositionZSlider.SetActive(true);
-        tornadoVelocitySlider.GetComponent<Slider>().value = 5;
+        tornadoVelocitySlider.GetComponent<Slider>().value = 3;
         tornadoPositionXSlider.GetComponent<Slider>().value = 0;
         tornadoPositionZSlider.GetComponent<Slider>().value = 0;
         weather.SetInt("TornadoRate", 500);
