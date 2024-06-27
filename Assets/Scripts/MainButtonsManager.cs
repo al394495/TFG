@@ -20,6 +20,7 @@ public class MainButtonsManager : MonoBehaviour
 
     public AudioSource rain;
     public AudioSource wind;
+    public AudioSource tornado;
 
     public void OnRainButtonPressed()
     {
@@ -31,6 +32,7 @@ public class MainButtonsManager : MonoBehaviour
         rain.mute = false;
         rain.volume = 0;
         wind.mute = false;
+        tornado.mute = true;
 
         snowRateSlider.SetActive(false);
         snowGravitySlider.SetActive(false);
@@ -53,6 +55,7 @@ public class MainButtonsManager : MonoBehaviour
 
         rain.mute = true;
         wind.mute = false;
+        tornado.mute = true;
 
         rainRateSlider.SetActive(false);
         rainDirectionSlider.SetActive(false);
@@ -76,6 +79,7 @@ public class MainButtonsManager : MonoBehaviour
 
         rain.mute = true;
         wind.mute = true;
+        tornado.mute = true;
 
         snowRateSlider.SetActive(false);
         snowGravitySlider.SetActive(false);
@@ -101,6 +105,7 @@ public class MainButtonsManager : MonoBehaviour
 
         rain.mute = true;
         wind.mute = true;
+        tornado.mute = false;
 
         snowRateSlider.SetActive(false);
         snowGravitySlider.SetActive(false);
